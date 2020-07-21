@@ -1,0 +1,94 @@
+@font-face {
+    font-family: neon;
+    src: url(webfonts/neon2.ttf);
+}
+
+body, h1, h2, h3, p, button{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    position: fixed; /*takes out of flow and make it as large as it's content size*/
+    width: 100%; /*this will reset the width to what we want it*/
+    text-align: center; /*aligns h1 element in the center of this container*/
+    z-index: 2; /*makes this top layer so other content doesn't cover header when scrolling*/
+    padding: 20px 0;
+    font-family: neon;
+    font-size: 36px;
+    padding : 10px;
+}
+
+.splash {
+    background-color: black;
+    height: 100vh;
+}
+
+.image {
+    width: 50%;
+    position: relative; /*allows you to apply offsets top, bottom, left, & right properties*/
+    left: 50%; /*brings left side of img to halfway mark of viewport*/
+    top: 50%; /*brings top side of img to halfway mark of viewport*/
+    transform: translate(-50%, -50%); /*splits the difference of the width/height to put center point of the element in center of viewport*/
+}
+
+.main {
+    background-color: #cccccc;
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+}
+
+.example {
+    background-color: white;
+    border: 1px solid #6c63ff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #6c63ff;
+    border-radius: 5px;
+    border: none;
+}
+
+.padding {
+    padding: 10px; /*adds space between content and border*/
+}
+
+.margin {
+    margin: 10px; /*adds space around elements outside of borders*/
+}
+
+.relative {
+    position: relative;
+    bottom: 5px;
+}
+
+.circle-container {
+    height: 300px;
+    border: 1px dashed #6c63ff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.circle1 {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle2 {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; /*.circle-container is set to position relative which is what this position absolute is referencing*/
+}
